@@ -46,6 +46,16 @@ program corr_cnv
     open(iunit,file=inputdat,form='formatted')
     call get_data(iunit)
     close(iunit)
-    
+    status = nf_close(ncid)
+10  continue
+    close(iunit)
+
+    write(stdout,*) 'file ',outputfile,' has been closed with err ',status
+  enddo
+1111 continue
+5555 continue
+  stop
+  end
+
     
 
